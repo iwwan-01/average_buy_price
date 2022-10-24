@@ -16,7 +16,12 @@ def main():
 
 def init_purchase():
     global counter
-    buy_price = eval(input(f'Please enter the buy price for purchase number {counter + 1}: '))
+    while True:
+        try:
+            buy_price = int(input(f'Please enter the buy price for purchase number {counter + 1}: '))
+            break
+        except ValueError:
+            print('Please enter a number value for your buy price!')
     purchases.append(buy_price)
     counter += 1
     print(*purchases, sep='\n')
@@ -27,6 +32,6 @@ def avg_calc():
     print(f'Your average buy price is: {result}€')
     print(f'Number of purchases: {counter}')
 
-main()
-
+if __name__ == '__main__':
+    main()
 
