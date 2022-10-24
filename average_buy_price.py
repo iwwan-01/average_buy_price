@@ -31,6 +31,7 @@ def avg_calc():
     result = int(sum(purchases) / counter)
     print(f'Your average buy price is: {result}€')
     print(f'Number of purchases: {counter}')
+    input('Press the ENTER key to exit.')
 
 if __name__ == '__main__':
     main()
